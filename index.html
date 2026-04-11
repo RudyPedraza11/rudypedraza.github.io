@@ -34,51 +34,38 @@
   .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
   .section { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; border-top: 1px solid var(--border); }
   .section-label { font-size: 11px; font-family: 'DM Mono', monospace; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; }
-  .chat-wrapper { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; background: var(--bg2); }
-  .chat-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 10px; }
-  .chat-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 500; color: white; flex-shrink: 0; }
-  .chat-title { font-size: 14px; font-weight: 500; }
-  .chat-sub { font-size: 12px; color: var(--muted); }
-  .chat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent2); margin-left: auto; }
-  .chat-messages { padding: 1.25rem; min-height: 300px; max-height: 400px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
-  .msg { display: flex; gap: 8px; align-items: flex-start; }
-  .msg.user { flex-direction: row-reverse; }
-  .bubble { max-width: 75%; padding: 10px 14px; border-radius: 14px; font-size: 14px; line-height: 1.5; }
-  .msg.bot .bubble { background: var(--bg3); color: var(--text); border: 1px solid var(--border); }
-  .msg.user .bubble { background: var(--accent); color: white; }
-  .msg-av { width: 26px; height: 26px; border-radius: 50%; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 500; color: white; flex-shrink: 0; margin-top: 2px; }
-  .msg.user .msg-av { background: var(--bg3); color: var(--muted); border: 1px solid var(--border); }
-  .typing { display: flex; gap: 4px; align-items: center; padding: 8px 0; }
-  .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: bounce 1.2s infinite; }
-  .dot:nth-child(2) { animation-delay: 0.2s; }
-  .dot:nth-child(3) { animation-delay: 0.4s; }
-  @keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-4px); } }
-  .chips { padding: 0 1.25rem 0.75rem; display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { font-size: 12px; padding: 5px 10px; border: 1px solid var(--border2); border-radius: 20px; color: var(--muted); cursor: pointer; background: transparent; font-family: 'DM Sans', sans-serif; transition: all 0.15s; white-space: nowrap; }
-  .chip:hover { color: var(--text); border-color: var(--accent); }
-  .chat-input-row { padding: 0.75rem 1.25rem; border-top: 1px solid var(--border); display: flex; gap: 8px; }
-  .chat-input { flex: 1; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 8px 12px; color: var(--text); font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color 0.2s; }
-  .chat-input:focus { border-color: var(--accent); }
-  .chat-input::placeholder { color: var(--muted); }
-  .send-btn { padding: 8px 16px; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 14px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; transition: background 0.2s; }
-  .send-btn:hover { background: #6d65cc; }
-  .send-btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
   .skill-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; font-size: 14px; color: var(--muted); }
   .skill-card strong { display: block; color: var(--text); font-weight: 500; margin-bottom: 4px; font-size: 14px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  .contact-feature { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+  .contact-icon { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+  .icon-purple { background: rgba(127,119,221,0.15); border: 1px solid rgba(127,119,221,0.3); }
+  .icon-teal { background: rgba(93,202,165,0.15); border: 1px solid rgba(93,202,165,0.3); }
+  .form-wrap { background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
   footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; font-size: 13px; color: var(--muted); max-width: 900px; margin: 0 auto; }
-  @media (max-width: 640px) { .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.25rem 2rem; } h1 { font-size: 32px; } .section { padding: 2rem 1.25rem; } header { padding: 1rem 1.25rem; } nav a { margin-left: 1rem; } }
+  @media (max-width: 640px) {
+    .hero { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.25rem 2rem; }
+    h1 { font-size: 32px; }
+    .section { padding: 2rem 1.25rem; }
+    header { padding: 1rem 1.25rem; }
+    nav a { margin-left: 1rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
+
 <header>
   <a href="#" class="logo">Rudy Pedraza</a>
   <nav>
     <a href="#chat">Chat</a>
     <a href="#about">About</a>
+    <a href="#contact">Contact</a>
     <a href="Rudy_Pedraza_Resume-2.pdf" download>Resume</a>
   </nav>
 </header>
+
 <div class="hero">
   <div>
     <div class="tag">Open to SE roles</div>
@@ -96,33 +83,37 @@
     <div class="stat"><div class="stat-num">30+</div><div class="stat-label">Demos per month</div></div>
   </div>
 </div>
+
 <div class="section" id="chat">
   <div class="section-label">AI assistant — ask me anything</div>
   <iframe src="https://rudycpedraza-rudy-resume-bot.hf.space" style="width:100%; height:700px; border:1px solid rgba(255,255,255,0.08); border-radius:16px;" allow="microphone"></iframe>
-  <div style="display:none"><div class="chat-wrapper">
-    <div class="chat-header">
-      <div class="chat-avatar">RP</div>
-      <div><div class="chat-title">Rudy's AI</div><div class="chat-sub">Powered by Claude + RAG</div></div>
-      <div class="chat-dot"></div>
-    </div>
-    <div class="chat-messages" id="messages">
-      <div class="msg bot">
-        <div class="msg-av">AI</div>
-        <div class="bubble">Hey! I'm Rudy's AI assistant. Ask me anything about his background, experience, or why he'd be a great Sales Engineer.</div>
+</div>
+
+<div class="section" id="contact">
+  <div class="section-label">Get in touch</div>
+  <div class="contact-grid">
+    <div>
+      <h2 style="font-size:28px; font-weight:300; margin-bottom:1rem; letter-spacing:-0.02em;">Work with <span style="color:var(--accent); font-weight:500;">Rudy.</span></h2>
+      <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:1.5rem;">Fill out the form and my AI automation will score your inquiry and send you a personalized response in under 60 seconds — no waiting, no generic templates.</p>
+      <div class="contact-feature">
+        <div class="contact-icon icon-purple">⚡</div>
+        AI scores your lead instantly
+      </div>
+      <div class="contact-feature">
+        <div class="contact-icon icon-teal">✉</div>
+        Personalized email drafted by Claude
+      </div>
+      <div class="contact-feature">
+        <div class="contact-icon icon-purple">📋</div>
+        Auto-logged to CRM
       </div>
     </div>
-    <div class="chips">
-      <button class="chip" onclick="sendChip(this)">Sales background?</button>
-      <button class="chip" onclick="sendChip(this)">Why Sales Engineering?</button>
-      <button class="chip" onclick="sendChip(this)">Technical skills?</button>
-      <button class="chip" onclick="sendChip(this)">What companies?</button>
-    </div>
-    <div class="chat-input-row">
-      <input class="chat-input" id="user-input" type="text" placeholder="Ask about Rudy's experience..." />
-      <button class="send-btn" id="send-btn" onclick="sendMessage()">Send</button>
+    <div class="form-wrap">
+      <iframe data-tally-src="https://tally.so/embed/pb7ALP?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Contact Rudy"></iframe>
     </div>
   </div>
 </div>
+
 <div class="section" id="about">
   <div class="section-label">Skills & tools</div>
   <div class="skills-grid">
@@ -134,50 +125,10 @@
     <div class="skill-card"><strong>Currently learning</strong>Cloud infrastructure, SQL, API integrations</div>
   </div>
 </div>
+
 <footer>Built by Rudy Pedraza · rudycpedraza@gmail.com · <a href="https://linkedin.com/in/rudy-pedraza" style="color: var(--accent); text-decoration: none;">LinkedIn</a></footer>
-<script src="https://cdn.jsdelivr.net/npm/@gradio/client/dist/index.min.js"></script>
-<script>
-async function sendMessage() {
-  const input = document.getElementById('user-input');
-  const btn = document.getElementById('send-btn');
-  const text = input.value.trim();
-  if (!text || btn.disabled) return;
-  input.value = '';
-  btn.disabled = true;
-  addMsg(text, 'user');
-  showTyping();
-  try {
-    const { Client } = gradio;
-    const client = await Client.connect("rudycpedraza/rudy-resume-bot");
-    const result = await client.predict("/chat", { message: text, history: [] });
-    removeTyping();
-    addMsg(result.data[0], 'bot');
-  } catch(e) {
-    removeTyping();
-    addMsg("Having trouble connecting right now. Try again in a moment!", 'bot');
-  }
-  btn.disabled = false;
-  input.focus();
-}
-function addMsg(text, role) {
-  const msgs = document.getElementById('messages');
-  const div = document.createElement('div');
-  div.className = `msg ${role}`;
-  div.innerHTML = role === 'bot' ? `<div class="msg-av">AI</div><div class="bubble">${text}</div>` : `<div class="bubble">${text}</div><div class="msg-av">You</div>`;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-function showTyping() {
-  const msgs = document.getElementById('messages');
-  const div = document.createElement('div');
-  div.className = 'msg bot'; div.id = 'typing';
-  div.innerHTML = `<div class="msg-av">AI</div><div class="bubble"><div class="typing"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>`;
-  msgs.appendChild(div);
-  msgs.scrollTop = msgs.scrollHeight;
-}
-function removeTyping() { const t = document.getElementById('typing'); if (t) t.remove(); }
-function sendChip(el) { document.getElementById('user-input').value = el.textContent; sendMessage(); }
-document.getElementById('user-input').addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
-</script>
+
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+
 </body>
 </html>
